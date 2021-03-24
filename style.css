@@ -26,6 +26,10 @@ button {
     padding: 0;
 }
 
+.header-wrapper {
+    height: 96px;
+}
+
 :root {
     --primary: #6C5CE7;
     --text: #2D3436;
@@ -90,4 +94,45 @@ button {
     color: var(--accent1);
     font-size: 18px;
     font-weight: bold;
+}
+
+.intro {
+    padding-top: 80px;
+}
+
+.intro__title {
+    text-align: center;
+    font-weight: 900px;
+    font-size: 64px;
+}
+
+.intro__title strong {
+    font-size: 96px;
+    font-weight: 800px;
+    line-height: 120px;
+    vertical-align: top;
+}
+
+.accent-text {
+    color: #D63031;
+    text-decoration: none;
+    text-shadow: 0 4px 0 white;
+    position: relative;
+}
+
+.accent-text span {
+    z-index: 2;
+    position: relative;
+}
+
+.accent-text::before {
+    content:"";
+    display: inline-block;
+    width: 191px;
+    height: 51px;
+    border-radius: 26px;
+    background: var(--accent2);
+    position: absolute;
+    bottom: -4px;
+    left: -5px;
 }
