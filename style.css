@@ -18,7 +18,7 @@ h1, h2, h3, p {
     padding: 0;
 }
 
-button {
+button, input, textarea {
     font-family: inherit;
     border: 0;
     background: none;
@@ -455,4 +455,151 @@ button {
 .price-block__button {
     background: #6C5CE7;
     color: white;
+}
+
+footer {
+    margin-top: 160px;
+    background-image: url("./images/Wave.svg");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 526px;
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 40px;
+    column-gap: 30px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a  {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer h3 {
+    color: #adadad;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 16px;
+}
+
+.socials {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+}
+
+.socials__item--accent {
+    border-radius: 50%;
+    background-color: var(--accent1);
+    height: 40px;
+}
+
+.email {
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--primary);
+}
+
+.bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 30px;
+}
+
+.bottom-nav ul {
+    display: grid;
+    row-gap: 16px;
+    align-content: start;
+}
+
+.form__row1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.form__row2 {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 30px;
+}
+
+.form input {
+    border-radius: 16px;
+    height: 48px;
+    padding-left: 16px;
+    background-color: rgba(194, 194, 194, 0.24);
+    font-size: 18px;
+}
+
+.form input::placeholder {
+    color: inherit;
+}
+
+.form__username {
+    background-image: url("./images/icon-user.svg");
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+}
+
+.form__email {
+    background-image: url("./images/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+}
+
+.form textarea {
+    border: 1px solid rgba(108, 92, 231, 0.24);
+    background-color: rgba(194, 194, 194, 0.24);
+    font-size: 18px;
+    padding-left: 16px;
+    padding-top: 16px;
+    border-radius: 16px;
+    resize: none;
+    background-position: right 4px ;
+    background-image: url("./images/icon-edit.svg");
+    background-repeat: no-repeat;
+}
+
+.form textarea::placeholder {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.form__row2__btn {
+    border-radius: 16px;
+    font-size: 24px;
+    letter-spacing: 0.25px;
+    text-shadow:  0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+}
+
+@media (max-width: 360px) {
+    .features__list {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .pricing__list {
+        grid-template-columns: auto;
+    }
+
+    .footer__content, .bottom-nav, .form__row1,
+    .form__row2{
+        grid-template-columns: 1fr;
+    }
+    .bottom-nav ul {
+        margin-bottom: 30px;
+    }
 }
